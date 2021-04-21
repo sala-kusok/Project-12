@@ -1,0 +1,39 @@
+@import "partials/params";
+@import "partials/mixins";
+
+// ------------ 2 #features ------------ //
+
+#features{
+
+  & .wrapper{
+    background: url("../images/line.png") 0 30% repeat-x;
+    background-origin: content-box;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+
+    & .features-tile{
+      .fun-width-interest(138px,1200px);
+      width: @interest;
+
+      & .img_bg{
+        background: #fff;
+        margin: 0 0 20px 0;
+
+        & img{
+
+        }
+      }
+
+      & strong{
+        display: block;
+        text-align: center;
+        .fun-px-tp-em(24px);
+        font-size: @em;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+    }
+  }
+}

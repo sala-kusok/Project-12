@@ -1,0 +1,42 @@
+@import "params";
+
+// избавляется от единиц измерения
+.delete-units(@units) {
+  @number: @units / ((@units * 0) + 1);
+}
+
+// переводит px в em
+.fun-px-tp-em(@px, @context: 16px) {
+
+  @em: (@px / @context) * 1em;
+
+}
+
+// считает ширину элемента в % от общий ширины блока
+.fun-width-interest(@widthElement, @widthBlock) {
+
+  @interest: (@widthElement / @widthBlock) * 100%;
+
+}
+
+// межбуквенный интервал
+.fun-letter-spacing(@sz, @context:16px) {
+  @spacing: (@sz * @context) / 1000;
+}
+
+// граница
+.out(@color: red){
+  outline: 1px solid @color;
+}
+
+// работа со шриштом
+.font(@fz:16px, @fw:@font-weight-body, @lh:@line-height-body, @fs:@font-style-body){
+
+  .fun-px-tp-em(@fz);
+
+  font-style: @fs;
+  font-weight: @fw;
+  font-size: @em;
+  line-height: @lh;
+
+}

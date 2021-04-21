@@ -1,0 +1,128 @@
+@import "partials/params";
+@import "partials/mixins";
+
+// ------------ 4 #ready-solutions ------------ //
+
+#ready-solutions{
+
+  & .wrapper{
+    padding: 70px 0 110px 0;
+
+    & h2{
+      .fun-px-tp-em(60px);
+      font-size: @em;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 0 78px 0;
+    }
+
+    & .ready-solutions-block{
+      display: flex;
+      justify-content: space-evenly;
+
+      & .ready-solutions-tile{
+        .fun-width-interest(313px,1200px);
+        flex: 0 0 @interest;
+        background: @background-yellow;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+
+        &:nth-child(2) .top-block::before{
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background: red;
+          top: -16px;
+          left: 20.2%;
+          transform: rotate(45deg);
+          background: @background-yellow;
+        }
+
+        &:nth-child(2) .top-block::after{
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background: red;
+          top: -16px;
+          right: 20.2%;
+          transform: rotate(45deg);
+          z-index: -99;
+          background: @background-yellow;
+        }
+
+        & .top-block{
+          padding: 40px 30px 40px 60px;
+          position: relative;
+
+          & .bestseller{
+            position: absolute;
+            top: -24px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 14px 0;
+            background: @background-yellow;
+            color: #e11a27;
+            .fun-width-interest(150px,313px);
+            width: @interest;
+            .fun-px-tp-em(17px);
+            font-size: @em;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 6px 6px 0 0;
+          }
+
+          & h3{
+            .fun-px-tp-em(32px);
+            font-size: @em;
+          }
+        }
+
+        & .center-block{
+          background: #fff;
+          margin: 0 5px;
+          padding: 18px 25px;
+          flex: 1 0 auto;
+          display: flex;
+          flex-direction: column;
+
+          & ul{
+            list-style: none;
+            margin: 0 0 15px 0;
+
+            & li{
+              margin: 0 0 10px 0;
+
+              &::before{
+                content: url("../images/checkbox.png");
+                position: relative;
+                margin: 0 10px 0 0;
+                bottom: -4px;
+              }
+            }
+          }
+
+          & .price{
+            margin: auto 0 0 0;
+            .fun-px-tp-em(60px);
+            font-size: @em;
+            align-self: center;
+          }
+        }
+
+        & .bottom-block{
+          padding: 12px 0;
+          .fun-px-tp-em(22px);
+          font-size: @em;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}

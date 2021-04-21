@@ -1,0 +1,88 @@
+@import "partials/params";
+@import "partials/mixins";
+
+// ------------ 1 header ------------ //
+
+#nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 0;
+
+  & .left{
+    display: flex;
+    align-items: center;
+
+    & i{
+      margin: 0 65px 0 0;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    & img{
+
+    }
+  }
+
+  & .right{
+    display: flex;
+    align-items: center;
+
+    & address{
+      background: @background-yellow;
+      padding: 8px 40px;
+      border-radius: 6px;
+
+      & a{
+        font-style: normal;
+        text-decoration: none;
+        transition: 0.2s ;
+
+        &:hover{
+          border-bottom: 1px dashed #000;
+        }
+      }
+    }
+
+    & i{
+      margin: 0 0 0 65px;
+      cursor: pointer;
+      font-size: 32px;
+    }
+  }
+
+}
+
+#slogan{
+  background: url('../images/header_bg.jpg') center center/cover no-repeat;
+
+  & .wrapper{
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .text{
+      margin: 50px 0 65px 0;
+      text-align: center;
+
+      & h1{
+        .fun-px-tp-em(58px);
+        font-size: @em;
+        margin: 0 0 20px 0;
+      }
+
+      & strong{
+        .fun-px-tp-em(24px);
+        font-size: @em;
+        font-weight: 300;
+      }
+    }
+
+    & .button{
+
+    }
+  }
+
+}
+

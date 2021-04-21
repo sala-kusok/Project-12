@@ -1,0 +1,97 @@
+@import "partials/params";
+@import "partials/mixins";
+@import "reset/reset";
+
+//  --------------- Подключения шрифтов ---------------  //
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+//  --------------- Подключения шрифтов ---------------  //
+
+//  --------------- Базовые настройки ---------------  //
+
+body {
+  background: @background-body;
+  color: @color-body;
+  font-weight: @font-weight-body;
+  font-size: @font-size-body;
+  font-family: @font-family-body;
+  line-height: @line-height-body;
+}
+
+a{
+  color: @color-visited-link;
+
+  &:visited{
+    color: @color-visited-link;
+    text-decoration: underline;
+  }
+
+  &:hover{
+    color: @color-hover-link;
+    text-decoration:none;
+  }
+
+  &:focus, &:active{
+    color: @color-focus-active-link;
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight:normal;
+}
+
+img{
+  max-width:100%;
+}
+
+
+
+//  --------------- Базовые настройки ---------------  //
+
+// ------------ Общие стили - начало ------------ //
+
+.wrapper{
+  max-width: @viewport-wrapper;
+  margin: 0 auto;
+}
+
+.clr{
+  clear:both;
+}
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.button{
+  padding: 14px 30px;
+  .fun-px-tp-em(26px);
+  font-size: @em;
+  text-transform: uppercase;
+  border-radius: 8px;
+
+  &--transparent{
+    background: transparent;
+    border: 1px solid #000000;
+
+    &:active{
+      box-shadow: inset 0 0 12px rgba(0,0,0, 0.4);
+    }
+  }
+
+  &--red{
+    background: @background-red;
+    border: 1px solid @background-red;
+    color: #fff;
+
+    &:active{
+      box-shadow: inset 0 0 12px rgba(0,0,0, 0.4);
+    }
+  }
+}
+
+// ------------ Общие стили - конец ------------ //
+

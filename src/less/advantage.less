@@ -1,0 +1,53 @@
+@import "partials/params";
+@import "partials/mixins";
+
+// ------------ 3 #advantage ------------ //
+
+#advantage{
+  background: @background-coffee;
+
+  & .wrapper{
+    padding: 55px 0 80px 0;
+    text-align: center;
+
+    & > h2{
+      .fun-px-tp-em(60px);
+      font-size: @em;
+      text-transform: capitalize;
+      margin: 0 0 60px 0;
+    }
+
+    & .advantage-block{
+      display: flex;
+      justify-content: space-around;
+      margin: 0 0 75px 0;
+
+      & .advantage-tile{
+        .fun-width-interest(270px,1200px);
+        flex: 0 0 @interest;
+        display: flex;
+        flex-direction: column;
+
+        & img{
+          margin: 0 0 22px 0;
+        }
+
+        & h3{
+          .fun-px-tp-em(24px);
+          font-size: @em;
+          line-height: 1.2;
+          margin: 0 0 25px 0;
+        }
+
+        & p{
+          line-height: 1.2;
+        }
+      }
+    }
+
+    & .button{
+      text-align: center;
+    }
+  }
+
+}
